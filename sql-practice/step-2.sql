@@ -1,4 +1,7 @@
 -- Step 2
 -- A WHERE clause can filter across any JOINed table, even if it's not in the
 -- final output of what is being SELECTed for.
--- Your code here 
+-- Your code here
+SELECT bands.name FROM bands
+    JOIN albums ON (bands.id = albums.band_id)
+    WHERE albums.num_sold BETWEEN 0 AND 20000;
